@@ -15,6 +15,9 @@ python-multipart = "*"
 passlib = "*"
 midtransclient = "*"
 python-dotenv = "*"
+databases = "*"
+cloudinary = "*"
+python-slugify = "*"
 
 [dev-packages]
 
