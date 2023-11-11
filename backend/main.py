@@ -14,6 +14,7 @@ from app.routes.rajaongkir import rajaongkir_router
 from app.routes.midtrans import midtransrouter
 from app.core.database import Base, engine
 from app.core.cloudinary import my_cloudinary
+from app.routes.dashboard import dashboardrouter
 
 
 app = FastAPI()
@@ -57,7 +58,8 @@ app.include_router(sliderrouter, prefix="/api")
 app.include_router(rajaongkir_router, prefix="/api")
 app.include_router(midtransrouter, prefix="/api")
 app.include_router(reviewrouter, prefix="/api")
+app.include_router(dashboardrouter, prefix="/api")
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="0.0.0.0", reload=True, port=3000)
+    uvicorn.run("main:app", host="0.0.0.0", reload=True, port=8000)
